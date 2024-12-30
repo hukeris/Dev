@@ -2,13 +2,13 @@
 const { test, expect } = require('@playwright/test');
 
 test('has title', async ({ page }) => {
-  //await page.goto('https://playwright.dev/');
+  await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
-  //await expect(page).toHaveTitle(/Playwright/);
+  await expect(page).toHaveTitle(/Playwright/);
 
   //Log to console
-  //console.log("URL: " + page.url());  
+  console.log("URL: " + page.url());  
   console.log("Hello World!");  
 });
 
