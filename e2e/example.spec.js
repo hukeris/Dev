@@ -11,6 +11,7 @@ test('has title', async ({ page }) => {
   //Log to console
   console.log("URL: " + page.url());  
   console.log("Hello World!");  
+  console.log();  
 });
 
 /*test('get started link', async ({ page }) => {
@@ -23,7 +24,7 @@ test('has title', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });*/
 
-test('has title2', async ({ browser }) => {
+test('has title2', async ({ browser, browserName }) => {
 
   const context = await browser.newContext({
     recordVideo: {
@@ -36,7 +37,7 @@ test('has title2', async ({ browser }) => {
   await page2.getByRole('link', { name: 'English 6,924,000+ articles' }).click();  
   await page2.screenshot({path: './wiki_screen.png'});
 
-  console.log('browser.browserType(): ' + browser.browserType());
+  console.log('browserName: ' + browserName );
   console.log("URL: " + page2.url()); 
 
   await page2.close();
