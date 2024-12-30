@@ -11,7 +11,7 @@ test('has title', async ({ page }) => {
   //Log to console
   console.log("URL: " + page.url());  
   console.log("Hello World!");  
-  console.log();  
+  
 });
 
 /*test('get started link', async ({ page }) => {
@@ -39,7 +39,8 @@ test('has title2', async ({ browser, browserName }) => {
 
   console.log('browserName: ' + browserName );
   console.log("URL: " + page2.url()); 
-
+  console.log();  
+  
   await page2.close();
   await context.close();
   await browser.close();
