@@ -2,14 +2,14 @@ const { chromium } = require('playwright');
 
 (async () => {
   const browser = await chromium.launch({
-    headless: false
+    headless: true
   });
  
-  const context = await browser.newContext({
+  /*const context = await browser.newContext({
     recordVideo: {
         dir: './playwright-test1/videos1'
     }
-  });
+  });*/
 
 const p0 = await context.newPage();
 const p1 = await context.newPage();
@@ -20,17 +20,17 @@ const p1 = await context.newPage();
   //await page.getByRole('link', { name: 'English 6,924,000+ articles' }).click();
 console.log(page.url());  
   //await page.getByRole('link', { name: 'December solstice' }).click();
-  await page.screenshot({path: './playwright-test1/wiki_screen.png'});
+  //await page.screenshot({path: './playwright-test1/wiki_screen.png'});
 //console.log(page.url());
-console.log('page.waitForLoadState:' + page.waitForLoadState());
+//console.log('page.waitForLoadState:' + page.waitForLoadState());
 
 
 
 p0.setDefaultTimeout(240000);
 await p0.goto('https://www.google.com');
-await p0.screenshot({path: './playwright-test1/idokep.png'});
+//await p0.screenshot({path: './playwright-test1/idokep.png'});
 console.log(p0.url());
-console.log('p0.waitForLoadState:' + p0.waitForLoadState());
+//console.log('p0.waitForLoadState:' + p0.waitForLoadState());
 
 console.log('xxx');
 
