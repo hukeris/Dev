@@ -5,11 +5,11 @@ const { chromium } = require('playwright');
     headless: true
   });
  
-  /*const context = await browser.newContext({
-    recordVideo: {
+ const context = await browser.newContext({
+     /*recordVideo: {
         dir: './playwright-test1/videos1'
-    }
-  });*/
+    }*/
+  });
 
 const p0 = await context.newPage();
 const p1 = await context.newPage();
