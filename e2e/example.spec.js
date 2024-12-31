@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const { chromium } = require('playwright');
 
-test('has title', async ({ page }) => {
+/*test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
@@ -10,9 +10,9 @@ test('has title', async ({ page }) => {
 
   //Log to console
   console.log("URL: " + page.url());  
-  console.log("Hello World!");  
+  console.log("Hello World!"); 
   
-});
+}); */
 
 /*test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
@@ -40,7 +40,7 @@ test('has title2', async ({ browser, browserName }) => {
   console.log('browserName: ' + browserName );
   console.log("URL: " + page2.url()); 
   console.log();  
-  
+
   await page2.close();
   await context.close();
   await browser.close();
