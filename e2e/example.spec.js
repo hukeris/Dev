@@ -38,7 +38,7 @@ test('has title2', async ({ browser, browserName }) => {
   await page2.screenshot({path: './wiki_screen.png'});
 
   console.log('browserName: ' + browserName );
-  console.log("URL: " + page2.url()); 
+  console.log("URL: " + page2.url());
   console.log();  
 
   await page2.close();

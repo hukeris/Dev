@@ -11,6 +11,15 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
+  // Glob patterns or regular expressions that match test files.
+  // https://playwright.dev/docs/test-configuration
+  // By default, Playwright runs .*(test|spec).(js|ts|mjs) files.  // 
+  // https://playwright.dev/docs/api/class-testconfig#test-config-test-match
+  // By default, Playwright looks for files matching the following glob pattern: **/*.@(spec|test).?(c|m)[jt]s?(x)
+  // eg.: 1.spec.js 1.test.js test-1.spec.js test-1.spec.ts a.test-1.test.js New Text Document.test.js
+  testMatch: '*.@(spec|test).?(c|m)[jt]s?(x)',
+
+  // Look for test files in below directory, relative to this configuration file.
   testDir: './',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -75,5 +84,6 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+
 });
 

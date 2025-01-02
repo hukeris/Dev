@@ -1,7 +1,7 @@
 node_modules/
 /test-results/
-/playwright-report/
 /blob-report/
 /playwright/.cache/
 Git/
 wiki_screen.png
+.vscode/settings.json
