@@ -38,6 +38,13 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+
+    // https://playwright.dev/docs/videos
+    video: 'on-first-retry',
+
+    // Run browser in headless mode.
+    headless: true
+
   },
 
   /* Configure projects for major browsers */
@@ -47,7 +54,7 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+    /*{
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -55,7 +62,7 @@ module.exports = defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },
+    },*/
 
     /* Test against mobile viewports. */
     // {
